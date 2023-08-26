@@ -1,0 +1,27 @@
+name: Manually Pull Docker Image from Docker Hub
+
+on:
+  workflow_dispatch:
+    inputs:
+      imageRepository:
+        description: 'Docker Image Repository (e.g., username/imagename)'
+        required: true
+        default: '150494/abhi94feb'
+      imageVersion:
+        description: 'Docker Image Version (Tag)'
+        required: true
+        default: 'latest'
+
+jobs:
+  pull-image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to Docker Hub
+      run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+    - name: Pull Docker image from Docker Hub
+      run: docker pull ${{ github.event.inputs.imageRepository }}:${{ github.event.inputs.imageVersion }}
