@@ -1,8 +1,8 @@
 #Adding Provider details
 provider "aws" {
     region = "ap-south-1"
-    access_key = "AKIAX2HWZ3C6L6FG7MMU"
-    secret_key = "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"
+    access_key = ${{ secrets.AWS_ACCESS_KEY_ID }}
+    secret_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   }
 
 #Create a custom VPC
