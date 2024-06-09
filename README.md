@@ -34,15 +34,3 @@ We have already started publishing images based on `amazonlinux:2023`. Users are
 ## Action Required
 
 Users of the deprecated images should plan to transition to the latest supported versions of these images. Continuing to use deprecated images after their deprecation date may expose your applications to security vulnerabilities and lack of support.
-
-## Contact
-
-For any questions or assistance with the migration process, please contact our support team at [support@example.com](mailto:support@example.com).
-
----
-
-Thank you for your attention to this matter.
-
----
-
-© 2024 Your Company. All rights reserved.
