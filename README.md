@@ -1,10 +1,10 @@
-# Deprecated Docker Images
+# Deprecated and Upcoming Deprecations of Docker Images
 
-This document lists the Docker images that have been deprecated and those scheduled for deprecation by June 2025. Please review the table below and update your dependencies accordingly.
+This document provides information about the Docker images that have been deprecated and those scheduled for deprecation by June 2025. Please review the table below and update your dependencies accordingly.
 
 ## Deprecated Images
 
-The following Docker images have already been deprecated:
+The following Docker images have been deprecated and are no longer supported:
 
 | Image Name           | Version   | Deprecation Date |
 |----------------------|-----------|------------------|
@@ -26,6 +26,10 @@ Additionally, all platform images based on `amazonlinux:2` will also be deprecat
 | lambda         | amazonlinux:2    | June 2025        |
 | openjdk        | amazonlinux:2    | June 2025        |
 | node18         | amazonlinux:2    | June 2025        |
+
+## Transition to New Base Images
+
+We have already started publishing images based on `amazonlinux:2023`. Users are encouraged to transition to these new images to ensure continued support and security.
 
 ## Action Required
 
